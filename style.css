@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+li {
+    list-style-type: none;
+}
+
+main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card>a>img {
+    border-radius: 24px;
+}
+
+.card_all {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.card_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_second {
+    margin-top: -10px;
+
+}
+
+/* TEXT_STYLE */
+a {
+    color: white;
+    font-size: 24px;
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.made {
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 20px;
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.text {
+    font-size: 25px;
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.p_card {
+    font-size: 22px;
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* ANIMATIONS */
+
+.card>a>img:hover {
+    transform: translate(0, -10px);
+    transition: transform 0.3s;
+}
+
+li>a:hover {
+    animation: blink 0.9s ease 0s 1 alternate forwards;
+}
+
+main {
+    animation: slide 0.6s ease 0s 1 alternate-reverse forwards;
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+/* adaptation */
+
+@media screen and (max-width: 1000px) {
+    .card>a>img {
+        width: 350px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 22px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .p_card {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .card>a>img {
+        width: 350px;
+    }
+
+    a {
+        font-size: 17px;
+    }
+
+    .text {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .p_card {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .card>a>img {
+        width: 350px;
+    }
+
+    a {
+        font-size: 12px;
+    }
+
+    .text {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .p_card {
+        font-size: 15px;
+    }
+}
